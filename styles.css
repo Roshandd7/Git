@@ -1,0 +1,99 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 13;
+    background-color: white;
+    width: 400px;
+    max-width: 80%;
+    color: black;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    background: rgb(230, 192, 123);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .modal-header font{
+     color: black;
+  }
+  .modal-body {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: rgb(185, 196, 189);
+  }
+  .modal-body input{
+    width:100%;
+    height: 30px;
+    border-radius:3px ;
+    border:1px solid rgb(151, 149, 149);
+    color: black;
+    
+  }
+  .close-button:hover{
+    color:red;
+  }
+  #submit{
+    float:center;
+    height:30px;
+    width: 70px;
+    margin: 10px 10px 10px 10px;
+    border:1px solid blue;
+    background: blue;
+    border-radius: 3px;
+  }
+  .submit:hover{
+    background: rgb(116, 156, 172);
+  }
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+    z-index: 12;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
